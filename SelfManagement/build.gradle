@@ -25,9 +25,26 @@ repositories {
 configurations {
 	providedRuntime
 }
-
+// ソースファイルの文字コード
+def defaultEncoding = 'UTF-8'
+compileJava {
+	options.encoding = defaultEncoding
+}
+compileTestJava {
+	options.encoding = defaultEncoding
+}
 dependencies {
+    // DBまわり
+    compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.1-SNAPSHOT")
+	//bootstrap
+	compile("org.webjars:jquery:2.1.4")
+	compile("org.webjars:bootstrap:3.3.5")
+	//springframe
 	compile('org.springframework.boot:spring-boot-starter-web')
+	//@get @set
+	compile('org.projectlombok:lombok')
+	//tomcat
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+	//test
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

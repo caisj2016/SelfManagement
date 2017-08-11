@@ -1,4 +1,4 @@
-package com.example.SelfManagement;
+package com.example.start;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
