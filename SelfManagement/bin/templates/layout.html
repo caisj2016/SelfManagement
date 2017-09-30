@@ -1,106 +1,76 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
-	lang="jp">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" lang="jp">
 
 <!--/* ヘッダー：CSS */-->
-<head th:fragment="css" th:remove="tag">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<!--/*
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    */-->
 
-<link rel="stylesheet"
-	href="../../static/bootstrap/css/bootstrap.min.css"
-	th:href="@{/bootstrap/css/bootstrap.min.css}" />
-<link rel="stylesheet" href="../../static/css/common.css"
-	th:href="@{/css/common.css}" />
-<link rel="stylesheet"
-	href="../../static/plugins/datepicker/css/bootstrap-datepicker.min.css"
-	th:href="@{/plugins/datepicker/css/bootstrap-datepicker.min.css}" />
-<link rel="stylesheet"
-	href="../../static/bootstrap-fileinput/css/fileinput.min.css"
-	media="all" th:href="@{/bootstrap-fileinput/css/fileinput.min.css}" />
+<head th:fragment="css" th:remove="tag">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css" th:href="@{/bootstrap/css/bootstrap.min.css}" />
+  <link rel="stylesheet" href="../../static/css/common.css" th:href="@{/css/common.css}" />
+  <link rel="stylesheet" href="../../static/plugins/datepicker/css/bootstrap-datepicker.min.css" th:href="@{/plugins/datepicker/css/bootstrap-datepicker.min.css}" />
+  <link rel="stylesheet" href="../../static/bootstrap-fileinput/css/fileinput.min.css" media="all" th:href="@{/bootstrap-fileinput/css/fileinput.min.css}" />
 </head>
 
 <!--/* ヘッダー：bootstrap-fileinput */-->
+
 <head th:fragment="fileinput" th:remove="tag">
-<script src="../../static/bootstrap-fileinput/js/fileinput.min.js"
-	th:src="@{/bootstrap-fileinput/js/fileinput.min.js}"></script>
-<script src="../../static/bootstrap-fileinput/js/plugins/purify.min.js"
-	th:src="@{/bootstrap-fileinput/js/plugins/purify.min.js}"></script>
-<script
-	src="../../static/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js"
-	th:src="@{/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js}"></script>
-<script
-	src="../../static/bootstrap-fileinput/js/plugins/sortable.min.js"
-	th:src="@{/bootstrap-fileinput/js/plugins/sortable.min.js}"></script>
-<script src="../../static/bootstrap-fileinput/themes/gly/theme.js"
-	th:src="@{/bootstrap-fileinput/themes/gly/theme.js}"></script>
-<script src="../../static/bootstrap-fileinput/themes/fa/theme.js"
-	th:src="@{/bootstrap-fileinput/themes/fa/theme.js}"></script>
-<script src="../../static/bootstrap-fileinput/js/locales/ja.js"
-	th:src="@{/bootstrap-fileinput/js/locales/ja.js}"></script>
+  <script src="../../static/bootstrap-fileinput/js/fileinput.min.js" th:src="@{/bootstrap-fileinput/js/fileinput.min.js}"></script>
+  <script src="../../static/bootstrap-fileinput/js/plugins/purify.min.js" th:src="@{/bootstrap-fileinput/js/plugins/purify.min.js}"></script>
+  <script src="../../static/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js" th:src="@{/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js}"></script>
+  <script src="../../static/bootstrap-fileinput/js/plugins/sortable.min.js" th:src="@{/bootstrap-fileinput/js/plugins/sortable.min.js}"></script>
+  <script src="../../static/bootstrap-fileinput/themes/gly/theme.js" th:src="@{/bootstrap-fileinput/themes/gly/theme.js}"></script>
+  <script src="../../static/bootstrap-fileinput/themes/fa/theme.js" th:src="@{/bootstrap-fileinput/themes/fa/theme.js}"></script>
+  <script src="../../static/bootstrap-fileinput/js/locales/ja.js" th:src="@{/bootstrap-fileinput/js/locales/ja.js}"></script>
 </head>
 
 <!--/* ヘッダー：Javascript */-->
+
 <head th:fragment="js" th:remove="tag">
-<!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<script src="../../static/js/jquery.min.js"
-	th:src="@{/js/jquery.min.js}"></script>
-<script src="../../static/plugins/bootstrap/js/bootstrap.min.js"
-	th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
-<script src="../../static/datepicker/js/bootstrap-datepicker.min.js"
-	th:src="@{/plugins/datepicker/js/bootstrap-datepicker.min.js}"></script>
-<script
-	src="../../static/plugins/datepicker/locales/bootstrap-datepicker.ja.min.js"
-	th:src="@{/plugins/datepicker/locales/bootstrap-datepicker.ja.min.js}"></script>
+  <script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+  <script src="../../static/bootstrap/js/popper.min.js" th:src="@{/bootstrap/js/popper.min.js}"></script>
+  <script src="../../static/bootstrap/js/tether.min.js" th:src="@{/bootstrap/js/tether.min.js}"></script>
+  <script src="../../static/bootstrap/js/bootstrap.js" th:src="@{/bootstrap/js/bootstrap.js}"></script>
+  <script src="../../static/datepicker/js/bootstrap-datepicker.min.js" th:src="@{/plugins/datepicker/js/bootstrap-datepicker.min.js}"></script>
+  <script src="../../static/plugins/datepicker/locales/bootstrap-datepicker.ja.min.js" th:src="@{/plugins/datepicker/locales/bootstrap-datepicker.ja.min.js}"></script>
 </head>
 
 <!--/* フッター */-->
 <footer th:fragment="footer" class=" text-center ">
-Cai.Sj Limited All right reserved.
+  Cai.Sj Limited All right reserved.
 </footer>
 
 <!--/* グローバルなエラー情報表示 */-->
 <div th:fragment="globalErrors" th:remove="tag">
-	<th:block th:if="${#fields.hasErrors('global')}">
-		<li class="list-unstyled" th:each="err : ${#fields.errors('global')}"
-			th:text="${err}">グローバルのエラー情報</li>
-	</th:block>
+  <th:block th:if="${#fields.hasErrors('global')}">
+    <li class="list-unstyled" th:each="err : ${#fields.errors('global')}" th:text="${err}">グローバルのエラー情報</li>
+  </th:block>
 </div>
 
 <!--/* 入力項目のエラー情報表示 */-->
 <div th:fragment="fieldErrors" th:remove="tag">
-	<th:block th:if="${fieldErrors?.size() > 0}">
-		<th:block th:each="field : ${fieldErrors}">
-			<li class="list-unstyled" th:each="err : ${#fields.errors({field})}"
-				th:text="${err}">入力項目のエラー情報</li>
-		</th:block>
-	</th:block>
+  <th:block th:if="${fieldErrors?.size() > 0}">
+    <th:block th:each="field : ${fieldErrors}">
+      <li class="list-unstyled" th:each="err : ${#fields.errors({field})}" th:text="${err}">入力項目のエラー情報</li>
+    </th:block>
+  </th:block>
 </div>
 
 <!--/* 全部（グローバルと入力項目）のエラー情報表示 */-->
 <div th:fragment="allErrors" th:remove="tag">
-	<th:block th:if="${#fields.hasAnyErrors()}">
-		<li class="list-unstyled" th:each="err : ${#fields.errors('global')}"
-			th:text="${err}">グローバルのエラー情報</li>
-		<th:block th:each="field : ${fieldErrors}">
-			<li class="list-unstyled" th:each="err : ${#fields.errors({field})}"
-				th:text="${err}">入力項目のエラー情報</li>
-		</th:block>
-	</th:block>
+  <th:block th:if="${#fields.hasAnyErrors()}">
+    <li class="list-unstyled" th:each="err : ${#fields.errors('global')}" th:text="${err}">グローバルのエラー情報</li>
+    <th:block th:each="field : ${fieldErrors}">
+      <li class="list-unstyled" th:each="err : ${#fields.errors({field})}" th:text="${err}">入力項目のエラー情報</li>
+    </th:block>
+  </th:block>
 </div>
 <div th:fragment="customerErrors" th:remove="tag">
-	<th:block th:if="${#fields.hasAnyErrors()}">
-		<li th:each="e : ${#fields.detailedErrors()}" th:class="list-unstyled"
-			th:text="${e.message}" />
+  <th:block th:if="${#fields.hasAnyErrors()}">
+    <li th:each="e : ${#fields.detailedErrors()}" th:class="list-unstyled" th:text="${e.message}" />
 
-	</th:block>
+  </th:block>
 </div>
+
 </html>
