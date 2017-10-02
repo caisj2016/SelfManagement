@@ -3,6 +3,8 @@ package com.example.dto;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,6 +18,7 @@ import lombok.Data;
 @Table(name = "Member")
 public class MemberDto extends TransactionEntity implements java.io.Serializable {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer memberId;
 	private String loginId;
 	private String encodedPassword;

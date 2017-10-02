@@ -30,7 +30,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		// 認証を行うユーザー情報を格納する
 		MemberDto user = null;
 		try {
-			user = userRepository.findOne(loginId);
+			user = userRepository.findMemberByLoginId(loginId);
 		} catch (Exception e) {
 			// 取得時にExceptionが発生した場合
 			throw new UsernameNotFoundException("It can not be acquired User");

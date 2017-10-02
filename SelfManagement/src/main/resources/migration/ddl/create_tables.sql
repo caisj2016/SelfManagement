@@ -5,7 +5,7 @@ CREATE TABLE member
    `MEMBER_ID`         MEDIUMINT      NOT NULL AUTO_INCREMENT,
    `LOGIN_ID`          VARCHAR(30)    NOT NULL COMMENT '用户ID',
    `ENCODED_PASSWORD`  VARCHAR(256) COMMENT '暗号化密码',
-   `NICKNAME`          VARCHAR(256) COMMENT '昵称',
+   `NICK_NAME`         VARCHAR(256) COMMENT '昵称',
    `EMAIL`             VARCHAR(256) COMMENT '邮箱',
    `BIRTHDAY`          VARCHAR(8) COMMENT '生日',
    `GENDER`            VARCHAR(1) COMMENT '性别',

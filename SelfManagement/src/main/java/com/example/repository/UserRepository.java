@@ -13,5 +13,8 @@ import com.example.dto.MemberDto;
 @Repository
 public interface UserRepository extends JpaRepository<MemberDto, String> {
 	@Query("SELECT t from MemberDto t where  t.loginId=:loginId and t.delFlg = 0")
-	MemberDto findOne(@Param("loginId") String loginId);
+	MemberDto findMemberByLoginId(@Param("loginId") String loginId);
+
+	@Query("SELECT count(*) from MemberDto t where  t.loginId=:loginId ")
+	long count(@Param("loginId") String loginId);
 }

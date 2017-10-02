@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" lang="jp">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>注册・时间管理</title>
+  <script th:replace="layout::js"></script>
+  <link th:replace="layout::css" />
+</head>
+
+<body>
+  <div th:replace="common::topNavbar"></div>
+  <div class=" col-md-12 col-md-offset-4 pt-50 auth-form">
+    <form accept-charset="UTF-8" th:action="@{/join}" autocomplete="off" class="setup-form js-signup-form" id="signup-form" method="post">
+      <h4 class="setup-form-title mb-3">Create your personal account</h4>
+
+      <dl class="form-group">
+        <dt class="input-label">
+				<label autocapitalize="off" autofocus="autofocus" for="nickName"
+					name="nickName">Username</label>
+			</dt>
+        <dd>
+          <input autocapitalize="off" autofocus="autofocus" class="form-control" id="nickName" name="nickName" size="30" type="text" />
+        </dd>
+      </dl>
+
+      <dl class="form-group">
+        <dt class="input-label">
+				<label autocapitalize="off" for="loginId" name="loginId">loginId</label>
+			</dt>
+        <dd>
+          <input autocapitalize="off" class="form-control" id="loginId" name="loginId" size="30" type="text" />
+        </dd>
+      </dl>
+
+      <dl class="form-group successed">
+        <dt class="input-label">
+				<label for="password" name="password">Password</label>
+			</dt>
+        <dd>
+          <input class="form-control" id="password" name="password" size="30" type="password" />
+        </dd>
+      </dl>
+      <button type="submit" class="btn btn-primary" id="signup_button" data-disable-with="Creating account…">Create an account</button>
+    </form>
+  </div>
+</body>
+
+</html>

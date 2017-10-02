@@ -27,7 +27,7 @@ import lombok.Data;
 public class TransactionEntity {
 	/** 削除フラグ */
 	@Column(name = "DEL_FLG", updatable = false)
-	private Integer delFlg;
+	private Integer delFlg = 0;
 
 	/** 登録日時 */
 	@Temporal(TemporalType.TIMESTAMP)
