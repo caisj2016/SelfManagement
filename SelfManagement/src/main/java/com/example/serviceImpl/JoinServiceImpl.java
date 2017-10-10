@@ -28,7 +28,8 @@ public class JoinServiceImpl implements JoinService {
 			member.setEncodedPassword(new BCryptPasswordEncoder().encode(form.getPassword()).toString());
 			member.setNickName(form.getNickName());
 			userRepository.save(member);
-			return form.getLoginId().toString();
+
+			return PageName.LOGININDEX;
 		} else {
 			result.rejectValue("loginId", "error.loginId", "注册的ID已经存在.");
 			return PageName.JOININDEX;

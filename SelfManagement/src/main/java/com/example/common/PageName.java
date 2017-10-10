@@ -18,4 +18,9 @@ public interface PageName {
 	 * 登录页面
 	 */
 	String LOGININDEX = "loginIndex";
+
+	/**
+	 *数据一览画面
+	 */
+	String DASHBOARD  ="dashboard";
 }

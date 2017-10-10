@@ -10,7 +10,7 @@
 	<title>登录・时间管理</title>
 
 	<script th:replace="layout::js"></script>
-	<link th:replace="layout::css" />
+	<link th:replace="layout::css-head" />
 </head>
 
 <body>
@@ -20,10 +20,10 @@
 			<div class="col-md-12 col-md-offset-4 pt-50">
 				<div class="auth-form">
 					<h3>Sign in to selfManagement</h3>
-					<form class="auth-form-body pt-30" role="form" id="login-form" th:action="@{/login}">
+					<form class="auth-form-body pt-30" role="form" id="login-form" th:action="@{/login}" method="post">
 						<fieldset>
 							<div class="form-group">
-								<input class="form-control" placeholder="loginId" name="text" type="text" />
+								<input class="form-control" placeholder="LoginId" name="loginId" type="text" />
 							</div>
 							<div class="form-group">
 								<input class="form-control" placeholder="Password" name="password" type="password" value="" />
