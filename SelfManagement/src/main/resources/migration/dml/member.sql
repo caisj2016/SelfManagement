@@ -1,1 +1,39 @@
+INSERT INTO member
+(
+  `LOGIN_ID`,
+  `ENCODED_PASSWORD`,
+  `NICK_NAME`,
+  `EMAIL`,
+  `BIRTHDAY`,
+  `GENDER`,
+  `TELPHONE`,
+  `RANK`,
+  `ICON`,
+  `ADMIN_ROLE`,
+  `DEL_FLG`,
+  `CREATE_NAME`,
+  `CREATE_DATE`,
+  `UPDATE_NAME`,
+  `UPDATE_DATE`
+)
+VALUES
+(
+  'jjxiaocai',
+  '$2a$10$YZ2t0VL6gNeFtEjrBa87junBR8v3XTowMR5wB40MlDnFJoqUPxfXC',
+  'csj',
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  0,
+  NULL,
+  TIMESTAMP '2017-10-10 13:32:44.000',
+  NULL,
+  TIMESTAMP '2017-10-10 13:32:44.000'
+);
+
+
 

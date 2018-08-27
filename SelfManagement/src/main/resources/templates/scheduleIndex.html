@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" lang="jp">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+
+	<title>HOME</title>
+	<script th:replace="layout::js"></script>
+	<link th:replace="layout::css" />
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div th:replace="common::menu"></div>
+		<div class="main-panel">
+			<div th:replace="common::menuNavbar"></div>
+			<div class="content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<div th:replace="calendar::calendar"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div>
+			<footer th:replace="layout::footer"></footer>
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>

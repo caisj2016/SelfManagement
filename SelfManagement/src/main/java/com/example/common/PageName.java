@@ -23,4 +23,9 @@ public interface PageName {
 	 *数据一览画面
 	 */
 	String DASHBOARD  ="dashboard";
+
+	/**
+	 *计划一览画面
+	 */
+	String SCHEDULEINDEX  ="scheduleIndex";
 }
